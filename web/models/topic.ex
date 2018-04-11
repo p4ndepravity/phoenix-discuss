@@ -1,6 +1,8 @@
 defmodule Discuss.Topic do
   use Discuss.Web, :model
 
+  @derive {Poison.Encoder, only: [:title]}
+
   schema "topics" do
     field :title, :string
     belongs_to :user, Discuss.User

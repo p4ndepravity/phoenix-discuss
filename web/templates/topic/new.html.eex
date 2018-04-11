@@ -4,7 +4,7 @@
     <%= error_tag f, :title %>
   </div>
   <%= submit "Save Topic", class: "btn btn-primary" %>
-<% end %>
-<%= link to: topic_path(@conn, :index) do %>
-  <button class="waves-effect waves-light btn red darken-1 right">Cancel</button>
+  <%= link to: topic_path(@conn, :index) do %>
+  <span class="waves-effect waves-light btn red darken-1 right">Cancel</span>
+  <% end %>
 <% end %>

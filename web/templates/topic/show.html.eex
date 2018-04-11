@@ -8,6 +8,6 @@
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    window.createSocket(<%= @topic.id %>)
+    window.createTopicSocket(<%= @topic.id %>)
   })
 </script>

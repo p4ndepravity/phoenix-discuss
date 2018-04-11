@@ -4,7 +4,7 @@ let socket = new Socket("/socket", { params: { token: window.userToken } });
 
 socket.connect();
 
-const createSocket = topicId => {
+const createTopicSocket = topicId => {
   let channel = socket.channel(`comments:${topicId}`, {});
   channel
     .join()
@@ -52,4 +52,4 @@ function commentTemplate(comment) {
   `;
 }
 
-window.createSocket = createSocket;
+window.createTopicSocket = createTopicSocket;

@@ -1,0 +1,8 @@
+<h5><%= @user.email %></h5>
+<ul class="collection">
+  <%= for topic <- @user.topics do %>
+    <li class="collection-item">
+      <%= link topic.title, to: topic_path(@conn, :show, topic) %>
+    </li>
+  <% end %>
+</ul>

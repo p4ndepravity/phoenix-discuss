@@ -27,6 +27,9 @@
         <ul class="right">
           <%= if @conn.assigns[:user] do %>
             <li>
+              <%= link "Profile", to: user_path(@conn, :show) %>
+            </li>
+            <li>
               <%= link "Logout", to: auth_path(@conn, :signout) %>
             </li>
           <% else %>
